@@ -1,3 +1,49 @@
 page-home {
 
+  ion-header {
+    background: linear-gradient(109.6deg, rgba(191, 99, 220, 1) 11.2%, rgba(115, 22, 184, 1) 81.2%);
+  }
+
+  ion-card {
+    position: relative;
+    text-align: center;
+  }
+
+  .card-md {
+    border-radius: 25px;
+  }
+
+  .card-title {
+    position: absolute;
+    top: 75%;
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+  }
+
+  .card-subtitle {
+    font-size: 1.0em;
+    position: absolute;
+    top: 52%;
+    width: 100%;
+    color: #fff;
+  }
+
+  h1 {
+    margin-left: 1rem;
+    color: white;
+  }
+
+  .searchbar-md .searchbar-input {
+    border-radius: 25px;
+  }
+
+  .searchbar-md {
+    background: none;
+  }
+
+  .badge-inline {
+    display: inline-block;
+  }
 }

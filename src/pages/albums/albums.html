@@ -1,0 +1,32 @@
+<ion-header>
+  <ng-container>
+    <img src="{{artist.picture_xl}}"/>
+    <ion-navbar class="back-btn-pos" transparent></ion-navbar>
+    <ion-title class="page-name">{{artist.name | titlecase}}</ion-title>
+    <ion-row class="badge-info badge-inline">
+      <ion-badge color="primary">{{artist.type | titlecase}}</ion-badge>
+      <ion-badge color="secondary-dark">{{artist.nb_fan | number: '2.'}} Fans</ion-badge>
+    </ion-row>
+  </ng-container>
+</ion-header>
+
+<ion-content padding>
+  <h2>Albums</h2>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let album of albums">
+        <ion-card (click)="loadTracksPage(album)">
+          <img src="{{album.cover_big}}"/>
+          <ion-card-content>
+            <ion-card-title class="album-title">{{album.title}}</ion-card-title>
+            <ion-row class="badge-inline">
+              <ion-badge *ngIf="album.explicit_lyrics" color="danger">explicit</ion-badge>
+              <ion-badge color="primary-light">{{album.release_date | date:'y'}}</ion-badge>
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

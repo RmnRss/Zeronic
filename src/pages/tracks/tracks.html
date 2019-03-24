@@ -1,0 +1,42 @@
+<ion-header>
+  <img src="{{album.cover_big}}"/>
+  <ion-navbar class="back-btn-pos" transparent></ion-navbar>
+  <ion-title class="page-name">{{album.title | titlecase}}</ion-title>
+  <ion-row class="badge-info badge-inline">
+    <ion-badge color="primary">{{album.type | titlecase}}</ion-badge>
+    <ion-badge *ngIf="tracks.length != 0" color="secondary"> {{tracks.length | number}} tracks</ion-badge>
+  </ion-row>
+</ion-header>
+
+<ion-content padding class="bg-dark">
+
+  <ion-list inset>
+    <button ion-item *ngFor="let track of tracks" (click)="playAudio(track)">
+      <ion-row>
+        <ion-col col-2 class="track-num">
+          <p>{{track.track_position}}</p>
+        </ion-col>
+        <ion-col col-8 class="track-title">
+          <b>{{track.title_short}}</b>
+        </ion-col>
+        <ion-col col-2 class="track-length">
+          <a>{{track.duration_min}}</a>
+        </ion-col>
+      </ion-row>
+    </button>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-row>
+    <ion-col class="player-btn" (click)="playPrevious()" col-5>
+      <ion-icon name="rewind"></ion-icon>
+    </ion-col>
+    <ion-col class="player-btn play-btn" col-2>
+      <ion-icon [name]="playing? 'pause' :'play'" (click)=" playing? pauseAudio():resume()"></ion-icon>
+    </ion-col>
+    <ion-col class="player-btn" (click)="playNext()" col-5>
+      <ion-icon name="fastforward"></ion-icon>
+    </ion-col>
+  </ion-row>
+</ion-footer>

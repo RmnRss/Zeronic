@@ -1,0 +1,57 @@
+page-albums {
+
+  /* Bottom left of Header text */
+  .page-name {
+    position: absolute;
+    bottom: 40px;
+    left: 18px;
+  }
+
+  .badge-info {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  /* Top left of header */
+  .back-btn-pos {
+    position: absolute;
+    top: 0px;
+  }
+
+  .badge-inline {
+    display: inline-block;
+  }
+
+  .grid {
+    padding: 0px;
+  }
+
+  ion-card {
+    position: relative;
+
+    .album-title {
+      text-align: left;
+      font-size: 1.5rem;
+      padding: 4px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+  }
+
+  .col {
+    padding: 0px;
+    margin-left: 0px;
+  }
+
+  .card-md {
+    border-radius: 0px 0px 25px 0px;
+    margin: 10px 10px 10px 10px;
+  }
+
+  .card-content-md {
+    padding: 5px 5px;
+
+  }
+}

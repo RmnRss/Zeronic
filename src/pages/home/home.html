@@ -1,14 +1,18 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+  <h1>Welcome to Zeronic</h1>
+  <ion-searchbar
+    (keyup.enter)="search(searchTerms)"
+    [(ngModel)]="searchTerms">
+  </ion-searchbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content padding class="">
+  <ion-row class="badge-info badge-inline">
+    <ion-badge color="secondary-dark">{{message | titlecase}}</ion-badge>
+    <ion-badge color="green" *ngIf="nbResult != undefined">{{nbResult | number: ''}} results</ion-badge>
+  </ion-row>
+  <ion-card *ngFor="let artist of artistsToDisplay" (click)="loadArtistPage(artist)">
+    <img src="{{artist.picture_big}}"/>
+    <div class="card-title">{{artist.name}}</div>
+  </ion-card>
 </ion-content>

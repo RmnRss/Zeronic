@@ -1,0 +1,66 @@
+page-tracks {
+  ion-footer {
+    background: map-get($colors, dark);
+    width: 100%;
+    height: 50px;
+  }
+
+  /* Bottom left of Header text */
+  .page-name {
+    position: absolute;
+    bottom: 40px;
+    left: 18px;
+  }
+
+  .badge-info {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+  }
+
+  .badge-inline {
+    display: inline-block;
+  }
+
+  /* Top left of header */
+  .back-btn-pos {
+    position: absolute;
+    top: 0px;
+  }
+
+  .track-num {
+    text-align: start;
+  }
+
+  .track-title {
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+
+  .track-length {
+    text-align: end;
+  }
+
+  .list-md[inset] {
+    margin: 0px;
+  }
+
+  //--- PLAYER ---//
+  .player-btn {
+    color: white;
+    text-align: center;
+    margin-top: 1.5%;
+  }
+
+  /* CONTROLS */
+
+  .play-btn {
+    transition: 0.3s;
+  }
+
+  ion-icon {
+    font-size: 3rem;
+  }
+}

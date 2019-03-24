@@ -1,16 +1,115 @@
-// http://ionicframework.com/docs/theming/
+//----      HEADER SASS      ----//
+
+ion-header {
+  position: absolute;
+  height: 33%;
+  border-radius: 0px 0px 80px 0px;
+  box-shadow: black;
+
+  .toolbar {
+    position: absolute;
+
+    .toolbar-background {
+      background: transparent;
+    }
+
+  }
+
+  img {
+    border-radius: 0px 0px 80px 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.toolbar-title-md {
+  padding: 0px;
+  color: white;
+}
+
+.bar-button-default-md {
+  color: white;
+}
+
+.header-md::after {
+  border-radius: 0px 0px 80px 0px;
+  box-shadow: none;
+  background-image: none;
+}
+
+//----      CONTENT CSS      ----//
 
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+//----      BACKGROUND CSS      ----//
+
+.bg-grad {
+  background: linear-gradient(109.6deg, rgba(191, 99, 220, 1) 11.2%, rgba(115, 22, 184, 1) 81.2%);;
+}
+
+//----      BADGES CSS      ----//
+
+.badge-md {
+  border-radius: 25px;
+}
+
+//----      LOADING ANIM CSS      ----//
+
+.splash {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(109.6deg, rgba(191, 99, 220, 1) 11.2%, rgba(115, 22, 184, 1) 81.2%);;
+}
+
+.spinner {
+  margin: 100px auto 0;
+  width: 70px;
+  text-align: center;
+}
+
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #000000;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0)
+  }
+  40% {
+    -webkit-transform: scale(1.0)
+  }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
